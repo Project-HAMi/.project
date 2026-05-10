@@ -1,0 +1,34 @@
+# Maintainer roster for hami
+# Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
+
+
+maintainers:
+  - project_id: "hami"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+          - nimbus318
+          - shouren
+          - wawa0210
+          - william-wang
+          - DSFans2014
+          - fouof
+          - mymneo
+          - windsonsea
+          - calvin0327
+          - bhatnitish
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - chaunceyjiang
+          - DSFans2014
+          - fouof
+          - lengrongfu
+          - ouyangluwei163
+          - wawa0210
+          - SataQiu
+          - sailorvii
+          - windsonsea
+          - rootsongjc
