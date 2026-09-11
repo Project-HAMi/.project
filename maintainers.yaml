@@ -9,6 +9,7 @@ maintainers:
       - name: "project-maintainers"
         members:
           - archlitchi
+          - fishman
           - nimbus318
           - shouren
           - wawa0210
