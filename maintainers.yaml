@@ -10,9 +10,11 @@ maintainers:
         members:
           - archlitchi
           - DSFans2014
+          - fishman
           - fouof
-          - wawa0210
+          - nimbus318
           - shouren
+          - wawa0210
       - name: "reviewers"
         members:
           - archlitchi
