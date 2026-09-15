@@ -1,0 +1,60 @@
+name: Sync Community Files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync-static:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: BetaHuhn/repo-file-sync-action@8b92be3375cf1d1b0cd579af488a9255572e4619 # v1
+        with:
+          GH_PAT: ${{ secrets.ORG_PAT }}
+          CONFIG_PATH: .github/repo-file-sync.yml
+
+  sync-generated:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - run: python3 sync-owners.py
+      - name: Push OWNERS and CONTRIBUTING.md to repos
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+        run: |
+          for dir in generated/*/; do
+            repo=$(basename "$dir")
+            for file in OWNERS CONTRIBUTING.md; do
+              sha=$(gh api "repos/Project-HAMi/$repo/contents/$file" --jq .sha 2>/dev/null) || true
+              echo "=== $repo / $file ==="
+              if [ -n "$sha" ]; then
+                gh api "repos/Project-HAMi/$repo/contents/$file" \
+                  -X PUT \
+                  -f message="sync: update $file from .project" \
+                  -f content="$(base64 -w0 "$dir/$file")" \
+                  -f sha="$sha" \
+                  -f branch=main
+              else
+                gh api "repos/Project-HAMi/$repo/contents/$file" \
+                  -X PUT \
+                  -f message="sync: create $file from .project" \
+                  -f content="$(base64 -w0 "$dir/$file")" \
+                  -f branch=main
+              fi
+            done
+          done
