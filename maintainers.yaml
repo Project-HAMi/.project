@@ -12,6 +12,7 @@ maintainers:
           - DSFans2014
           - fishman
           - fouof
+          - moezdil
           - nimbus318
           - shouren
           - wawa0210
@@ -22,7 +23,6 @@ maintainers:
           - DSFans2014
           - fouof
           - lengrongfu
-          - mesutoezdil
           - ouyangluwei163
           - wawa0210
 
@@ -36,6 +36,8 @@ maintainers:
         members:
           - archlitchi
           - chaunceyjiang
+          - maverick-woo
+          - moezdil
 
   - project_id: "volcano-vgpu-device-plugin"
     org: "Project-HAMi"
@@ -76,6 +78,9 @@ maintainers:
           - archlitchi
           - fouof
           - calvin0327
+      - name: "reviewers"
+        members:
+          - moezdil
 
   - project_id: "KAI-resource-isolator"
     org: "Project-HAMi"
@@ -84,13 +89,6 @@ maintainers:
         members:
           - archlitchi
       - name: "reviewers"
-        members:
-          - archlitchi
-
-  - project_id: "dcu-vgpu-device-plugin"
-    org: "Project-HAMi"
-    teams:
-      - name: "project-maintainers"
         members:
           - archlitchi
 
@@ -114,6 +112,10 @@ maintainers:
       - name: "project-maintainers"
         members:
           - archlitchi
+          - Nimbus318
+      - name: "reviewers"
+        members:
+          - Nimbus318
 
   - project_id: "hami-vnpu-core"
     org: "Project-HAMi"
@@ -135,6 +137,10 @@ maintainers:
       - name: "project-maintainers"
         members:
           - archlitchi
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - DSFans2014
 
   - project_id: "ai-benchmark"
     org: "Project-HAMi"
@@ -142,3 +148,78 @@ maintainers:
       - name: "project-maintainers"
         members:
           - archlitchi
+
+  - project_id: "website"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+          - wawa0210
+          - windsonsea
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - wawa0210
+          - windsonsea
+          - rootsongjc
+          - moezdil
+
+  - project_id: "community"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+          - wawa0210
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - wawa0210
+
+  - project_id: "ascend-dra-driver"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+          - fouof
+          - shouren
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - fouof
+          - shouren
+
+  - project_id: "amd-device-plugin"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+
+  - project_id: "amd-hami-core"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+
+  - project_id: "hami-demo"
+    org: "Project-HAMi"
+    teams:
+      - name: "project-maintainers"
+        members:
+          - archlitchi
+          - fouof
+          - shouren
+          - fishman
+      - name: "reviewers"
+        members:
+          - archlitchi
+          - chaunceyjiang
+          - DSFans2014
+          - fouof
+          - lengrongfu
+          - ouyangluwei163
+          - wawa0210
