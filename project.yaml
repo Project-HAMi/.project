@@ -21,7 +21,7 @@ repositories:
 
 website: "https://project-hami.github.io/HAMi/"
 
-artwork: "https://landscape.cncf.io/logos/hami.svg"
+artwork: "https://github.com/cncf/artwork/tree/main/projects/hami"
 
 adopters:
   path: "https://github.com/Project-HAMi/.project/blob/main/ADOPTERS.md"
